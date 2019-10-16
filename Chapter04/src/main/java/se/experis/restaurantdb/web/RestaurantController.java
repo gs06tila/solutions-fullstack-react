@@ -1,19 +1,19 @@
-package com.packt.cardatabase.web;
+package se.experis.restaurantdb.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.packt.cardatabase.domain.Car;
-import com.packt.cardatabase.domain.CarRepository;
+import se.experis.restaurantdb.domain.Restaurant;
+import se.experis.restaurantdb.domain.RestaurantRepository;
 
 @RestController
-public class CarController {
+public class RestaurantController {
 	@Autowired
-	private CarRepository repository;
+	private RestaurantRepository repository;
 	
 	@RequestMapping("/cars")
-	public Iterable<Car> getCars() {
+	public Iterable<Restaurant> getRestaurants() {
 		return repository.findAll();
 	}
 }

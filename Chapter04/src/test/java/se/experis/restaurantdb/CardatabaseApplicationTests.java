@@ -1,4 +1,4 @@
-package com.packt.cardatabase;
+package se.experis.restaurantdb;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
