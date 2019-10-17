@@ -38,7 +38,6 @@ public class Restaurant {
     private Date updatedAt;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "restaurant")
-    @JsonIgnore
     private List<Review> reviews;
 
     @ManyToOne(fetch = FetchType.LAZY)

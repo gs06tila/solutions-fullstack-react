@@ -38,8 +38,7 @@ public class AuthenticationService {
                     .getSubject();
 
             if (user != null)
-                return new UsernamePasswordAuthenticationToken(user, null,
-                        emptyList());
+                return new UsernamePasswordAuthenticationToken(user, null,  emptyList());
         }
         return null;
     }

@@ -16,7 +16,7 @@ public class User {
 	private long userId;
 
 	@Column(length=128, nullable = false, updatable = false)
-	private String username;
+	private String user;
 
 	@Column(length = 128)
 	private String email;
@@ -39,20 +39,22 @@ public class User {
 	@Column(length = 1)
 	private int active;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "restaurant")
+    private List<Review> reviews;
+
+
 	public User() {}
 
-	public User(String username, String password, String email, String role, int active) {
+	public User(String user, String password, String email, String role, int active) {
 		super();
 		userId=0;
-		this.username = username;
+		this.user = user;
 		this.email = email;
 		this.password = password;
 		this.role = role;
 		this.active = active;
 	}
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-	private List<Review> reviews;
 
 	public long getUserId() {
 		return userId;
@@ -119,9 +121,8 @@ public class User {
 	}
 
 	//Getters and setters
-	public List<Review> getReviews() {
-		return reviews;
-	}
+
+
 
 	public void setReviews(List<Review> reviews) {
 		this.reviews = reviews;
