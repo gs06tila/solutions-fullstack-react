@@ -55,21 +55,12 @@ public class User {
 		this.active = active;
 	}
 
-
-	public long getUserId() {
-		return userId;
+	public String getUser() {
+		return user;
 	}
 
-	public void setUserId(long userId) {
-		this.userId = userId;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUser(String user) {
+		this.user = user;
 	}
 
 	public String getEmail() {
