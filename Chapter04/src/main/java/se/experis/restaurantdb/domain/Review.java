@@ -29,7 +29,7 @@ public class Review {
     private Restaurant restaurant;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "owner")
+    @JoinColumn(name = "user")
     private User user;
 
     public Review(){}

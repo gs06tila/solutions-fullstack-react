@@ -39,7 +39,7 @@ public class User {
 	@Column(length = 1)
 	private int active;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "restaurant")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Review> reviews;
 
 
